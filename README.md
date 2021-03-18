@@ -6,6 +6,8 @@ The editor will load and save content to the `textarea` in Markdown format, maki
 
 <img src="screenshot.png" width="600">
 
+Note that this is a proof of concept.
+
 The extension uses the [Isolated Block Editor](https://github.com/Automattic/isolated-block-editor/). This can also be found in:
 
 - [Plain Text Editor](https://github.com/Automattic/isolated-block-editor/src/browser/README.md) - standalone JS file that can replace any `textarea` on any page with a full Gutenberg editor
@@ -15,9 +17,17 @@ The extension uses the [Isolated Block Editor](https://github.com/Automattic/iso
 
 ## Development
 
-The editor is found in `src`, with the Chrome code in `background.js` and `manifest.json`.
+The editor is found in `src`, with the Chrome code in `extension/background.js` and `manifest.json`.
 
-Running `yarn start` will build the development version of the extension. See the *Installing* section for details of how to load the extension.
+Running `yarn start` will build the development version of the extension. See the *Installing* section for details of how to load the extension. You will need to refresh the extension each time a change is made.
+
+## Releases
+
+Pre-built versions can be found in the [releases](https://github.com/Automattic/gutenberg-everywhere-chrome/releases) section. Follow the *Installing* instructions for details about loading an extension into Chrome.
+
+To distribute a release on Github:
+- Ensure `GITHUB_TOKEN` has been set with a [personal access token](https://github.com/settings/tokens/new?scopes=repo) for this repo.
+- `yarn dist` will build, zip, and upload the release to this repo
 
 ## Installing
 
