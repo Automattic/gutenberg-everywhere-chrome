@@ -11,7 +11,7 @@
 	"author": "Automattic",
 	"license": "ISC",
 	"dependencies": {
-		"isolated-block-editor": "automattic/isolated-block-editor#update/packages",
+		"isolated-block-editor": "automattic/isolated-block-editor#v1.0.1",
 		"markdown-it": "^12.0.4",
 		"path": "^0.12.7",
 		"react-shadow": "^19.0.2",

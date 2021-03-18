@@ -8298,9 +8298,9 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-isolated-block-editor@automattic/isolated-block-editor#update/packages:
-  version "1.0.0"
-  resolved "https://codeload.github.com/automattic/isolated-block-editor/tar.gz/c42a0625ab172287f227eab4b761d9f11f9304d3"
+isolated-block-editor@automattic/isolated-block-editor#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/automattic/isolated-block-editor/tar.gz/b2b3a5fd010636689cea01d5bdd5d9d486c1cb76"
   dependencies:
     "@wordpress/a11y" "^2.15.0"
     "@wordpress/annotations" "^1.25.0"
