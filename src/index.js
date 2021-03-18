@@ -134,9 +134,9 @@ function canChange( area ) {
 	}
 
 	// Github
-	if ( area.name === 'issue[body]' ) {
-		return false;
-	}
+	// if ( area.name === 'issue[body]' ) {
+	// 	return false;
+	// }
 
 	return true;
 }

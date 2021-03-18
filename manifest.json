@@ -9,14 +9,19 @@
 		"name": "Gutenberg Everywhere"
 	},
 	"background": {
-		"scripts": [ "background.js" ],
+		"scripts": [ "extension/background.js" ],
 		"persistent": false
+	},
+	"icons": {
+		"16": "extension/icons/icon-16.png",
+		"48": "extension/icons/icon-48.png",
+		"128": "extension/icons/icon-128.png"
 	},
 	"web_accessible_resources": [ "build/gutenberg-everywhere.css" ],
 	"content_scripts": [
 		{
 			"js": [ "build/gutenberg-everywhere.js" ],
-			"css": [ "build/global.css", "build/gutenberg-everywhere.css" ],
+			"css": [ "build/gutenberg-everywhere.css" ],
 			"matches": [ "<all_urls>" ]
 		}
 	]

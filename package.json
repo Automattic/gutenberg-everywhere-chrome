@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "NODE_ENV=development webpack --mode development --progress --config ./webpack.config.js --watch",
 		"build": "NODE_ENV=production webpack --mode production --progress --config ./webpack.config.js",
-		"release": "rm -rf release && mkdir -p release && cp -R manifest.json chrome-extension.png build background.js release"
+		"release": "yarn build && rm -rf release && mkdir -p release && cp -R manifest.json build extension release"
 	},
 	"author": "Automattic",
 	"license": "ISC",
