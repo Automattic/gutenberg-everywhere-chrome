@@ -4,3 +4,27 @@
 	--wp-admin-theme-color-darker-20: #006187;
 	--wp-admin-border-width-focus: 2px;
 }
+
+.gutenberg-everywhere__loading {
+	min-height: 125px;
+	background-color: #ccc;
+	border: 1px solid #ccc;
+	animation: gutenberg-loading-fade 1.6s ease-in-out infinite;
+	margin-bottom: 57px;
+
+	> div {
+		display: none;
+	}
+}
+
+@keyframes gutenberg-loading-fade {
+	0% {
+		opacity: 0.3;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
