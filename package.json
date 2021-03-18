@@ -6,7 +6,7 @@
 		"start": "NODE_ENV=development webpack --mode development --progress --config ./webpack.config.js --watch",
 		"build": "NODE_ENV=production webpack --mode production --progress --config ./webpack.config.js",
 		"release": "yarn build && rm -rf release && mkdir -p release && cp -R manifest.json build extension release",
-		"dist": "yarn release && rm -rf dist && mkdir dist && mv release gutenberg-everywhere-chrome && zip gutenberg-everywhere-chrome.zip -r gutenberg-everywhere-chrome && mv gutenberg-everywhere-chrome release && mv gutenberg-everywhere-chrome.zip dist"
+		"dist": "yarn release && rm -rf dist && mkdir dist && mv release gutenberg-everywhere-chrome && zip gutenberg-everywhere-chrome.zip -r gutenberg-everywhere-chrome && mv gutenberg-everywhere-chrome release && mv gutenberg-everywhere-chrome.zip dist && release-it"
 	},
 	"author": "Automattic",
 	"license": "ISC",
