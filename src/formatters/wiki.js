@@ -1,7 +1,9 @@
 import TurndownService from 'turndown';
+import MarkdownIt from 'markdown-it';
 
 const turndown = new TurndownService( {
 	bulletListMarker: '-',
+	headingStyle: 'atx',
 } );
 
 turndown.addRule( 'listItem', {
@@ -22,14 +24,46 @@ turndown.addRule( 'listItem', {
 		return prefix + content + ( node.nextSibling && ! /\n$/.test( content ) ? '\n' : '' );
 	},
 } );
+turndown.addRule( 'bold', {
+	filter: 'strong',
+
+	replacement: function ( content, node, options ) {
+		return "'''" + content + "'''";
+	},
+} );
+turndown.addRule( 'italic', {
+	filter: 'em',
+
+	replacement: function ( content, node, options ) {
+		return "''" + content + "''";
+	},
+} );
+turndown.addRule( 'pre', {
+	filter: 'pre',
+
+	replacement: function ( content, node, options ) {
+		return "{{{" + content + "}}}";
+	},
+} );
+
+/**
+ * Initial content loader. Determine if the textarea contains blocks or raw HTML
+ * @param {string} content Text area content
+ * @param {*} parser Gutenberg `parse` function
+ * @param {*} rawHandler Gutenberg `rawHandler` function
+ */
+export function load( content, parser, rawHandler ) {
+	const md = new MarkdownIt();
+
+	// Raw HTML - do our best
+	return rawHandler( { HTML: md.render( content.value ) } );
+}
 
 /**
  * Saves content to the textarea
  * @param {string} content Serialized block content
  * @param {HTMLTextAreaElement} textarea Textarea node
  */
-function saveContent( content, textarea ) {
+export function save( content, textarea ) {
 	textarea.value = turndown.turndown( content ) + '\n';
 }
-
-export default saveContent;
