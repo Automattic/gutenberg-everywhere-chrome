@@ -9,10 +9,10 @@ import root from 'react-shadow';
  * Internal dependencies
  */
 
-import IsolatedBlockEditor from 'isolated-block-editor';
+import IsolatedBlockEditor from '@automattic/isolated-block-editor';
 import ShadowCSS from '../shadow';
 
-/** @typedef {import('isolated-block-editor').BlockEditorSettings} BlockEditorSettings */
+/** @typedef {import('@automattic/isolated-block-editor').BlockEditorSettings} BlockEditorSettings */
 
 /**
  * These are the Gutenberg and IsolatedBlockEditor settings. Everything not set uses the defaults.
