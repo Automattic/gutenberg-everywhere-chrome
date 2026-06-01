@@ -10,7 +10,7 @@ Note that this is a proof of concept.
 
 The extension uses the [Isolated Block Editor](https://github.com/Automattic/isolated-block-editor/). This can also be found in:
 
-- [Plain Text Editor](https://github.com/Automattic/isolated-block-editor/src/browser/README.md) - standalone JS file that can replace any `textarea` on any page with a full Gutenberg editor
+- [Plain Text Editor](https://github.com/Automattic/isolated-block-editor/blob/trunk/src/browser/README.md) - standalone JS file that can replace any `textarea` on any page with a full Gutenberg editor
 - [Gutenberg Everywhere](https://github.com/Automattic/gutenberg-everywhere/) - a WordPress plugin to add Gutenberg to comments, WP admin pages, bbPress, and BuddyPress
 - [Gutenberg Desktop](https://github.com/Automattic/gutenberg-desktop/) - a desktop editor that supports the loading and saving of HTML and Markdown files
 - [P2](https://wordpress.com/p2/) - WordPress as a collaborative workspace (coming soon for self-hosted)
