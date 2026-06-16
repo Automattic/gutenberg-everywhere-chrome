@@ -15,7 +15,7 @@
 		"@emotion/react": "^11.9.3",
 		"@wordpress/base-styles": "^4.6.0",
 		"entities": "2.0.0",
-		"markdown-it": "12.1.0",
+		"markdown-it": "14.2.0",
 		"path": "^0.12.7",
 		"react-dates": "^21.8.0",
 		"react-shadow": "^19.0.3",
